@@ -10,29 +10,42 @@ namespace piedraPapelTijera
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Rock, Paper & Scissors game!");
-            Console.WriteLine("Do you choose rock, paper or scissors?");
-            var userChoice = Console.ReadLine();
-
-            // ComputerChoice Logic
-            var rnd = new Random();
-            var computerOption = rnd.Next(1, 4);
-            string computerChoise;
-
-            switch (computerOption)
+            var playAgain = string.Empty;
+            do
             {
-                case 1:
-                    computerChoise = "rock";
-                    break;
-                case 2:
-                    computerChoise = "paper";
-                    break;
-                case 3:
-                    computerChoise = "scissors";
-                    break;
-                default:
-                    break;
-            } // end switch computerOption
+                Console.Clear();
+                Console.WriteLine("Welcome to Rock, Paper & Scissors game!");
+                Console.WriteLine("Do you choose rock, paper or scissors?");
+                var userChoice = Console.ReadLine();
+
+                // ComputerChoice Logic
+                var rnd = new Random();
+                var computerOption = rnd.Next(1, 4);
+                string computerChoise = string.Empty;
+
+                switch (computerOption)
+                {
+                    case 1:
+                        computerChoise = "rock";
+                        break;
+                    case 2:
+                        computerChoise = "paper";
+                        break;
+                    case 3:
+                        computerChoise = "scissors";
+                        break;
+                    default:
+                        break;
+                } // end switch computerOption
+
+                Console.WriteLine();
+
+                var game = new Program();
+                Console.WriteLine(game.compare(userChoice, computerChoise).ToString().ToUpper());
+                Console.WriteLine();
+                Console.WriteLine("Do you want to play again? Y/N");
+                playAgain = Console.ReadLine();
+            } while (playAgain.ToLower() == "y");
 
         } // End Main()
 
@@ -75,6 +88,7 @@ namespace piedraPapelTijera
                     return "scissors wins";
                 }
             }
+            return "";
         } // end compare
     }
 }
