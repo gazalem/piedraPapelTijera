@@ -1,0 +1,35 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // Controls the font family.
+    "editor.fontFamily": "Menlo, Roboto Mono, Monaco, 'Courier New', monospace",
+
+    // Controls the font size.
+    "editor.fontSize": 12,
+    
+    // Controls the cursor style, accepted values are 'block', 'line', 'underline', 'line-thin', 'underline-thin' and 'block-outline'.
+    "editor.cursorStyle": "line",
+
+    // Control the cursor animation style, possible values are 'blink', 'smooth', 'phase', 'expand' and 'solid'
+    "editor.cursorBlinking": "phase",
+
+    // Controls whether the editor should render indent guides
+    "editor.renderIndentGuides": true,
+
+    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+    "files.autoSave": "off",
+
+    // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+    "editor.formatOnSave": false,
+    
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 2,
+
+    // Specify Icon Theme
+    "workbench.iconTheme": "vscode-icons",
+
+    // Controls if the editor should allow to move selections via drag and drop.
+    "editor.dragAndDrop": false,
+
+    // Controls if the minimap is shown
+    "editor.minimap.enabled": false
+  }
